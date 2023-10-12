@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="box">123</div>
+    <div class="box" id="t2">abc</div>
+    <ul>
+        <li>t1</li>
+        <li>t2</li>
+        <li>t3</li>
+    </ul>
+
+    <script>
+        const box = document.querySelector(".box")
+        const box2 = document.querySelector("#t2")
+        const li = document.querySelector("ul li:first-child")
+        //是一个nodelist
+        const lis = document.querySelectorAll("ul li")
+        // box.style.color = "red"
+
+
+        console.log(box);
+        console.log(box2);
+        console.log(li);
+        console.log(lis);
+    </script>
+</body>
+</html>
