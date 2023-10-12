@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper{
+            width: 1000px;
+            height: 500px;
+            background: hsl(224, 60%, 48%) no-repeat center;
+            padding: 125px 250px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <strong>传智教育年会抽奖</strong>
+        <h1>一等奖:<span id="one"></span></h1>
+        <h2>二等奖:<span id="two"></span></h2>
+        <h5>三等奖:<span id="three"></span></h5>
+    </div>
+
+    <script>
+        //1.声明数组
+        const personArr = ["布洛妮娅","希儿","卡芙卡","银狼","青雀"]
+
+        const random = Math.floor(Math.random()*personArr.length)
+        const one = document.querySelector("#one")
+        one.innerHTML = personArr[random]
+        personArr.splice(random,1)//从random处开始，删除一个
+        //console.log(personArr);
+
+        const random2 = Math.floor(Math.random()*personArr.length)
+        const two = document.querySelector("#two")
+        two.innerHTML = personArr[random2]
+        personArr.splice(random2,1)//从random处开始，删除一个
+        //console.log(personArr);
+
+        const random3 = Math.floor(Math.random()*personArr.length)
+        const three = document.querySelector("#three")
+        three.innerHTML = personArr[random3]
+        personArr.splice(random3,1)//从random处开始，删除一个
+        //console.log(personArr); 
+    </script>
+</body>
+</html>
